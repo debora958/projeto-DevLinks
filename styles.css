@@ -44,11 +44,13 @@ body{
 
     /*USANDO atalho para todas AS CONFIGURAÇÕES do BACKGROUND: COLOR IMAGE REPEAT POSITION SIZE*/
         background: var(--bg-url) no-repeat top center/cover;
+        height: 100vh;/*deixa a tela por completo*/
 }
 
 
 #container{
-    width: 360px;
+    width: 100%;
+    max-width: 360px;
     margin: 56px auto 0px;
     padding: 0 24px;
 
@@ -103,16 +105,21 @@ height - não precisa ser usado, pois a altura vai ser confome tá o tamanho do 
     z-index: 1;
     transform: translateY(-50%);/*alinhar o top do sol verticalmente*/
 
+    animation: slide-back 0.2s;
+
 }
 
 
 .light #switch button{
-    right: 0;
-    left: initial;
+    animation: slide-in 0.2s forwards;/*manter as propriedades que estão na keyframes*/
+}
+
+#switch button:hover{
+    outline: 8px solid var(--highlight-color);
 }
 
 #switch span{
-    display: block;
+    display: block;                                                                                                 
     width: 64px;
     height: 24px;
     background: var(--surface-color);
@@ -188,4 +195,38 @@ footer{
     padding: 24px 0;
     text-align: center;
     font-size: 14px;
+}
+
+
+@media (min-width:700px){
+    :root{
+        --bg-url:url(./assets/bg-desktop.jpg)
+    }
+
+    .light{
+        --bg-url:url(./assets/bg-desktop-ligth.jpg)
+
+
+    }
+}
+
+/*animações*/
+@keyframes slide-in{
+    from{
+        left: 0;
+    }
+    to{
+        left: 50%;
+    }
+
+}
+
+@keyframes slide-back{
+    from {
+        left: 50%;
+
+    }
+    to {
+        left: 0;
+    }
 }
