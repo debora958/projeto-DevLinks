@@ -50,7 +50,7 @@ body{
 
 #container{
     width: 100%;
-    max-width: 360px;
+    max-width: 588px;
     margin: 56px auto 0px;
     padding: 0 24px;
 
@@ -60,8 +60,7 @@ body{
 display inline não funciona a margin auto
 height - não precisa ser usado, pois a altura vai ser confome tá o tamanho do texto*/
 
-
-
+/*profile*/
 
 #profile{
     text-align: center;
@@ -80,6 +79,8 @@ height - não precisa ser usado, pois a altura vai ser confome tá o tamanho do 
     margin-top: 8px;
 
 }
+
+/*switch*/
 
 #switch {
     position: relative;
@@ -129,6 +130,8 @@ height - não precisa ser usado, pois a altura vai ser confome tá o tamanho do 
     border-radius: 9999px;
 }
 
+/*links*/
+
 ul{
     list-style: none;
     display: flex;
@@ -155,16 +158,20 @@ ul li a{
     -webkit-backdrop-filter: blur(4px);/*navegador safari*/
 
     text-decoration: none;
-    font-weight: 500px;
+    font-weight: 500;
 
     transition: background 0.2s;
 }
+
+/*pseudo-selector*/
 
 
 ul li a:hover{
     background-color: var(--surface-color-hover);
     border: 1.5px solid var(--text-color);
 }
+
+/*links redes sociais*/
 
 #redes-links{ /*alinhar os links dentro das bolinhas*/
     display: flex;
@@ -173,6 +180,7 @@ ul li a:hover{
     font-size: 24px;
     
 }
+
 
 #redes-links a{
     display: flex;
